@@ -1,0 +1,13 @@
+<resources>
+
+    <!-- text size -->
+    <dimen name="text_medium">12sp</dimen>
+    <dimen name="text_normal">14sp</dimen>
+    <dimen name="text_large">16sp</dimen>
+
+    <dimen name="thumb_width">22dp</dimen>
+    <dimen name="thumb_height">22dp</dimen>
+
+    <dimen name="margin_small">13dp</dimen>
+
+</resources>

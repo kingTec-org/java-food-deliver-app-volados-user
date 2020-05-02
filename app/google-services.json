@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "113471243713",
+    "firebase_url": "https://volados-275821.firebaseio.com",
+    "project_id": "volados-275821",
+    "storage_bucket": "volados-275821.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:113471243713:android:4cfad0d2e60d9cc3281b40",
+        "android_client_info": {
+          "package_name": "com.etcetera.volados"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "113471243713-687gvb4ag4a5ulqrb1ovm802mo3nce6e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKKIyVmSaHR_-sv2gypukSqtb8L5OqlwA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "113471243713-687gvb4ag4a5ulqrb1ovm802mo3nce6e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

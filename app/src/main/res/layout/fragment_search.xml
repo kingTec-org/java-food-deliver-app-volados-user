@@ -1,0 +1,248 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:layoutDirection="@string/layout_direction"
+    tools:context=".views.main.fragments.SearchFragment">
+
+    <RelativeLayout
+        android:id="@+id/search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/white"
+        android:elevation="5dp">
+
+        <com.obs.CustomTextView
+            android:id="@+id/userdeliverystatus"
+            style="@style/ClanProForUBER_Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingStart="20dp"
+            android:text="@string/search_Restaurant"
+            android:textColor="@color/total_text_colur"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/locate_arrow"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/userdeliverystatus"
+            android:rotation="180"
+            android:scaleX=".5"
+            android:scaleY=".5"
+            android:src="@drawable/gobackleftarrow"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_layout"
+        android:background="@color/search_back"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/ivSearch"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:padding="4dp"
+            android:src="@drawable/search" />
+
+        <com.obs.CustomEditText
+            android:id="@+id/edtSearch"
+            style="@style/ClanProForUBER_News"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/ivSearch"
+            android:layout_toStartOf="@+id/ivClose"
+            android:background="@color/transparent"
+            android:hint="@string/search_for_restaurant_or_dish"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:textAlignment="viewStart"
+            android:padding="5dp"
+            android:textColor="@color/total_text_colur"
+            android:textColorHint="@color/search_hint"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:padding="5dp"
+            android:src="@drawable/close_x"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/base_line1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/search_bar"
+        android:background="@color/line_colour" />
+
+    <ScrollView
+        android:id="@+id/svCategoryList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/base_line1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rltSearchCategories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/top_categories_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <com.obs.CustomTextView
+                        android:id="@+id/top_categories_text"
+                        style="@style/ClanProForUBER_News"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingStart="10dp"
+                        android:paddingTop="20dp"
+                        android:text="@string/top_categories"
+                        android:textColor="@color/search_category"
+                        android:textSize="12dp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcvTopcategories"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/top_categories_text"
+                        android:layout_marginTop="7dp"
+                        android:nestedScrollingEnabled="false"
+                        android:padding="10dp">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/more_categories_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/top_categories_lay"
+                    android:layout_marginTop="20dp">
+
+
+                    <com.obs.CustomTextView
+                        android:id="@+id/more_categories_text"
+                        style="@style/ClanProForUBER_News"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingStart="10dp"
+                        android:text="@string/more_restaurant"
+                        android:textColor="@color/search_category"
+                        android:textSize="12dp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/more_search_list_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/more_categories_text"
+                        android:layout_marginTop="12dp"
+                        android:nestedScrollingEnabled="false"
+                        android:padding="5dp">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rltResultList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rltSearchCategories"
+                android:layout_marginTop="10dp"
+                android:visibility="gone">
+
+
+                <com.obs.CustomTextView
+                    android:id="@+id/tvResultCount"
+                    style="@style/ClanProForUBER_News"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingStart="17dp"
+                    android:paddingTop="15dp"
+                    android:text=""
+                    android:textColor="@color/total_text_colur"
+                    android:textSize="15dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcResults"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvResultCount"
+                    android:nestedScrollingEnabled="false"
+                    android:padding="10dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/rltEmptylist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_bar"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:padding="25dp"
+        android:visibility="gone">
+
+        <com.obs.CustomTextView
+            android:id="@+id/empty_list"
+            style="@style/ClanProForUBER_News"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/no_results_found"
+            android:textColor="@color/total_text_colur" />
+
+    </RelativeLayout>
+</RelativeLayout>
+
+    <!--<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/empty_list_lay"
+    android:visibility="visible"
+    android:gravity="center_horizontal"
+    android:layout_below="@+id/top_categories_lay">
+    <com.obs.CustomTextView
+        style="@style/ClanProForUBER_News"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/empty_list"
+        android:layout_centerHorizontal="true"
+        android:text="No Results Found"/>
+
+    </RelativeLayout>-->

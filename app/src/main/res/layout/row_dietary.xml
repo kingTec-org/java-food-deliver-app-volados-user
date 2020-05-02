@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="@string/layout_direction"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/ivDietaryImage"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:padding="5dp"
+        android:scaleX=".9"
+        android:scaleY=".9"
+        android:src="@drawable/filter_vegan_love" />
+
+    <com.obs.CustomTextView
+        android:id="@+id/tvDietaryName"
+        style="@style/ClanProForUBER_News"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@+id/ivDietaryImage"
+        android:text="@string/vegan"
+        android:textColor="@color/total_text_colur"
+        android:textSize="12dp" />
+
+    <ImageView
+        android:id="@+id/ivDietaryTick"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:padding="5dp"
+        android:scaleX=".9"
+        android:scaleY=".9"
+        android:src="@drawable/checked"
+        android:tint="@color/loginbuttoon"/>
+</RelativeLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layoutDirection="@string/layout_direction"
+    android:padding="10dp">
+
+    <com.obs.CustomTextView
+        android:id="@+id/item_count"
+        style="@style/ClanProForUBER_Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="5dp"
+        android:drawableEnd="@drawable/ic_closer_green"
+        android:drawableTint="@color/apptheme"
+        android:drawablePadding="-3dp"
+        android:text="1"
+        android:textColor="@color/apptheme"
+        android:textSize="13dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="15dp"
+        android:layout_toEndOf="@+id/item_count"
+        android:layout_toStartOf="@+id/item_price"
+        android:orientation="vertical">
+
+        <com.obs.CustomTextView
+            android:id="@+id/tvFoodName"
+            style="@style/ClanProForUBER_News"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/total_text_colur"
+            android:textSize="13dp" />
+
+        <com.obs.CustomTextView
+            android:id="@+id/tvDeliveryNotes"
+            style="@style/ClanProForUBER_News"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text=""
+            android:textColor="@color/text_semi_dark"
+            android:textSize="12dp"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <com.obs.CustomTextView
+        android:id="@+id/item_price"
+        style="@style/ClanProForUBER_News"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="5dp"
+        android:text=""
+        android:textColor="@color/total_text_colur"
+        android:textSize="13dp" />
+</RelativeLayout>

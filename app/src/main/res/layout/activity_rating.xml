@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/infobackcolur"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:layoutDirection="@string/layout_direction"
+    tools:context="gofereats.views.main.subviews.RatingActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:scaleX=".6"
+            android:scaleY=".6"
+            android:src="@drawable/gobackleftarrow"
+            android:visibility="gone" />
+
+        <com.obs.CustomTextView
+            android:id="@+id/tvResturantOrderId"
+            style="@style/ClanProForUBER_News"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text=""
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="12dp" />
+
+        <RelativeLayout
+            android:id="@+id/help_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp">
+
+            <com.obs.CustomTextView
+                android:id="@+id/gethelp"
+                style="@style/ClanProForUBER_News"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/help"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/submit"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMenus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:nestedScrollingEnabled="false">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <RelativeLayout
+                android:id="@+id/driver_rating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rvMenus"
+                android:layout_margin="10dp"
+                android:background="@color/white"
+                android:padding="10dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivDriverImage"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp" />
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_marginTop="-15dp"
+                    android:id="@+id/like_status_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/ivDriverImage"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/thumbs_up_selected"
+                    android:visibility="visible" />
+
+                <com.obs.CustomTextView
+                    android:id="@+id/delivery_status"
+                    style="@style/ClanProForUBER_News"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivDriverImage"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="@string/how_was_the_delivery"
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+
+                <LinearLayout
+                    android:id="@+id/thumbs_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/delivery_status"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    android:weightSum="2">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/thumbs_up"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/thumbs_up_normal" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/thumbs_down"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/thumbs_down_normal" />
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/feedback_comments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/thumbs_lay"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/white"
+                    android:visibility="gone">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvIssues"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/add_commet_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/feedback_comments"
+                    android:visibility="gone">
+
+                    <com.obs.CustomEditText
+                        android:id="@+id/edtDriverComment"
+                        style="@style/ClanProForUBER_Book"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:ellipsize="start"
+                        android:gravity="center_horizontal"
+                        android:hint="@string/add_a_comment"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:singleLine="true" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/restaurant_rating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/driver_rating"
+                android:layout_margin="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"
+                android:padding="10dp">
+
+
+                <RelativeLayout
+                    android:id="@+id/rest_details_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/ivResturantImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:scaleType="fitXY" />
+
+                    <View
+                        android:id="@+id/dim"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="@drawable/background_dark_dim" />
+
+                    <com.obs.CustomTextView
+                        android:id="@+id/tvResturantName"
+                        style="@style/ClanProForUBER_Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="14dp" />
+                </RelativeLayout>
+
+                <RatingBar
+                    android:mirrorForRtl="true"
+                    android:id="@+id/ratingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rest_details_lay"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:numStars="5"
+                    android:progress="0"
+                    android:theme="@style/RatingBar" />
+
+                <com.obs.CustomEditText
+                    android:id="@+id/edtRestaurantComment"
+                    style="@style/ClanProForUBER_Book"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ratingBar"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/transparent"
+                    android:ellipsize="middle"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/add_a_comment"
+                    android:inputType="text"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <com.obs.CustomButton
+        android:id="@+id/submit"
+        style="@style/ClanProForUBER_News"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-10dp"
+        android:layout_marginStart="-10dp"
+        android:background="@color/appbuttondisable"
+        android:enabled="false"
+        android:text="@string/submit"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+</RelativeLayout>

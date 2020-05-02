@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/predictedRow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layoutDirection="@string/layout_direction"
+    android:padding="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/pin"
+        android:orientation="vertical">
+
+        <com.obs.CustomTextView
+            android:id="@+id/address"
+            style="@style/ClanProForUBER_News"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="5dp"
+            android:text=""
+            android:textColor="@color/total_text_colur"
+            android:textSize="14dp"
+            android:textAlignment="viewStart"/>
+
+        <com.obs.CustomTextView
+            android:id="@+id/address_secondry"
+            style="@style/ClanProForUBER_News"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/address"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="20dp"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/text_dark_gray"
+            android:textSize="12dp"
+            android:textAlignment="viewStart"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/pin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:paddingBottom="5dp"
+        android:paddingStart="5dp"
+        android:paddingTop="5dp"
+        android:scaleX=".7"
+        android:scaleY=".7"
+        android:src="@drawable/location_pin_icon" />
+</RelativeLayout>

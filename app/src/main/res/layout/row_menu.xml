@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="@string/layout_direction"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/lltRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@+id/ivTick"
+        android:orientation="vertical">
+
+        <com.obs.CustomTextView
+            android:id="@+id/tvMenuName"
+            style="@style/ClanProForUBER_Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Dinner"
+            android:textColor="@color/total_text_colur"
+            android:textSize="14dp" />
+
+        <com.obs.CustomTextView
+            android:id="@+id/tvMenuTime"
+            style="@style/ClanProForUBER_Book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="12.00 - 1.00"
+            android:textColor="@color/category_hint"
+            android:textSize="11dp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivTick"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/tick_green"
+        android:tint="@color/apptheme"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/lltRow"
+        android:layout_marginTop="9dp"
+        android:background="@color/gray"
+        android:visibility="gone" />
+</RelativeLayout>

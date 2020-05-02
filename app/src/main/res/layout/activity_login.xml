@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/loginback"
+    android:orientation="vertical"
+    android:layoutDirection="@string/layout_direction"
+    tools:context="gofereats.views.signup_login.LoginActivity">
+
+    <RelativeLayout
+        android:id="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/white"
+        android:elevation="5dp">
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="15dp"
+            android:scaleX=".9"
+            android:scaleY=".9"
+            android:src="@drawable/backarrow_black"
+            android:visibility="visible" />
+
+
+        <com.obs.CustomTextView
+            style="@style/ClanProForUBER_Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:text="@string/login"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <com.obs.CustomTextView
+        android:id="@+id/logintext"
+        style="@style/ClanProForUBER_News"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="35dp"
+        android:gravity="center"
+        android:text="@string/log_in_text"
+        android:textAllCaps="true"
+        android:textColor="@color/dim_black"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/ccp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:ccpDialog_keyboardAutoPopup="false"
+                app:ccpDialog_textColor="@color/total_text_colur"
+                app:ccp_arrowSize="1sp"
+                app:ccp_clickable="true"
+                app:ccp_showNameCode="false"
+                app:ccp_textSize="16sp" />
+
+            <com.obs.CustomEditText
+                android:id="@+id/mobilenumber"
+                style="@style/ClanProForUBER_News"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/transparent"
+                android:hint="@string/enter_your_mobile_number"
+                android:inputType="number"
+                android:textColor="@color/total_text_colur"
+                android:textColorHint="@color/hint_colur"
+                android:textSize="12sp"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/loginback" />
+
+        <com.obs.CustomEditText
+            android:id="@+id/password"
+            style="@style/ClanProForUBER_News"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:layout_margin="15dp"
+            android:text=""
+            android:gravity="start"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/total_text_colur"
+            android:textColorHint="@color/hint_colur"
+            android:textSize="12sp"
+            android:textAlignment="viewStart"/>
+    </LinearLayout>
+
+    <com.obs.CustomButton
+        android:id="@+id/login"
+        style="@style/ClanProForUBER_News"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/ripple_effect"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/login"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="13sp" />
+
+    <com.obs.CustomTextView
+        android:id="@+id/forgotpassword"
+        style="@style/ClanProForUBER_Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:text="@string/forgot_password"
+        android:textAllCaps="true"
+        android:textColor="@color/apptheme"
+        android:textSize="9sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="30dp">
+
+
+        <com.obs.CustomButton
+            android:id="@+id/register"
+            style="@style/ClanProForUBER_Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_border"
+            android:minHeight="30dp"
+            android:paddingBottom="5dp"
+            android:paddingStart="35dp"
+            android:paddingEnd="35dp"
+            android:paddingTop="5dp"
+            android:text="@string/register"
+            android:textAllCaps="true"
+            android:textColor="@color/Registertext"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+</LinearLayout>

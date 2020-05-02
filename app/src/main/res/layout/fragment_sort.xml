@@ -1,0 +1,171 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:choiceMode="singleChoice"
+    android:orientation="vertical"
+    android:layoutDirection="@string/layout_direction"
+    tools:context="gofereats.views.main.fragments.sortingfragments.SortFragment">
+
+    <RelativeLayout
+        android:id="@+id/recommended_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/recommended_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="5dp"
+            android:scaleX=".9"
+            android:scaleY=".9"
+            android:src="@drawable/filter_recommended" />
+
+        <com.obs.CustomTextView
+            android:id="@+id/recommended_text"
+            style="@style/ClanProForUBER_News"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/recommended_icon"
+            android:layout_toRightOf="@+id/recommended_icon"
+            android:text="@string/recommended"
+            android:textColor="@color/total_text_colur"
+            android:textSize="12dp" />
+
+        <ImageView
+            android:id="@+id/check"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:padding="5dp"
+            android:scaleX=".9"
+            android:scaleY=".9"
+            android:src="@drawable/checked"
+            android:tint="@color/loginbuttoon"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mostpopular_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/mostpopular_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="5dp"
+            android:scaleX=".9"
+            android:scaleY=".9"
+            android:src="@drawable/filter_most_popular" />
+
+        <com.obs.CustomTextView
+            android:id="@+id/mostpopular_text"
+            style="@style/ClanProForUBER_News"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/mostpopular_icon"
+            android:layout_toRightOf="@+id/mostpopular_icon"
+            android:text="@string/most_popular"
+            android:textColor="@color/total_text_colur"
+            android:textSize="12dp" />
+
+        <ImageView
+            android:id="@+id/check_mostpopular"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:padding="5dp"
+            android:scaleX=".9"
+            android:scaleY=".9"
+            android:src="@drawable/checked"
+            android:tint="@color/loginbuttoon"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rating_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/rating_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="3dp"
+            android:scaleX=".9"
+            android:scaleY=".9"
+            android:src="@drawable/filter_rating_star_white" />
+
+        <com.obs.CustomTextView
+            android:id="@+id/rating_text"
+            style="@style/ClanProForUBER_News"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/rating_icon"
+            android:layout_toRightOf="@+id/rating_icon"
+            android:text="@string/rating"
+            android:textColor="@color/total_text_colur"
+            android:textSize="12dp" />
+
+        <ImageView
+            android:id="@+id/check_rating"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:padding="5dp"
+            android:scaleX=".9"
+            android:scaleY=".9"
+            android:src="@drawable/checked"
+            android:tint="@color/loginbuttoon"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/delivery_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/delivery_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="3dp"
+            android:scaleX=".9"
+            android:scaleY=".9"
+            android:src="@drawable/filter_fast_delivery"
+            android:tint="@color/black" />
+
+        <com.obs.CustomTextView
+            android:id="@+id/delivery_text"
+            style="@style/ClanProForUBER_News"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/delivery_icon"
+            android:layout_toRightOf="@+id/delivery_icon"
+            android:text="@string/delivery_time"
+            android:textColor="@color/total_text_colur"
+            android:textSize="12dp" />
+
+        <ImageView
+            android:id="@+id/check_delivery"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:padding="5dp"
+            android:scaleX=".9"
+            android:scaleY=".9"
+            android:src="@drawable/checked"
+            android:tint="@color/loginbuttoon"/>
+    </RelativeLayout>
+</LinearLayout>

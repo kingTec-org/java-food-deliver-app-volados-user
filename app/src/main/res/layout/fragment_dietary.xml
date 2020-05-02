@@ -1,0 +1,128 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layoutDirection="@string/layout_direction"
+    tools:context="gofereats.views.main.fragments.sortingfragments.DietaryFragment">
+
+    <RelativeLayout
+        android:id="@+id/veg_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/veg_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="5dp"
+            android:scaleX=".9"
+            android:scaleY=".9"
+            android:src="@drawable/filter_veg_leaf" />
+
+        <com.obs.CustomTextView
+            android:id="@+id/veg_text"
+            style="@style/ClanProForUBER_News"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/veg_icon"
+            android:layout_toRightOf="@+id/veg_icon"
+            android:text="@string/vegetarian"
+            android:textColor="@color/total_text_colur"
+            android:textSize="12dp" />
+
+        <ImageView
+            android:id="@+id/check_veg"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:padding="5dp"
+            android:scaleX=".9"
+            android:scaleY=".9"
+            android:src="@drawable/checked" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/vegan_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/vegan_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="5dp"
+            android:scaleX=".9"
+            android:scaleY=".9"
+            android:src="@drawable/filter_vegan_love" />
+
+        <com.obs.CustomTextView
+            android:id="@+id/vegan_text"
+            style="@style/ClanProForUBER_News"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/vegan_icon"
+            android:layout_toRightOf="@+id/vegan_icon"
+            android:text="@string/vegan"
+            android:textColor="@color/total_text_colur"
+            android:textSize="12dp" />
+
+        <ImageView
+            android:id="@+id/check_vegan"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:padding="5dp"
+            android:scaleX=".9"
+            android:scaleY=".9"
+            android:src="@drawable/checked" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/gluten_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/gluten_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="5dp"
+            android:scaleX=".9"
+            android:scaleY=".9"
+            android:src="@drawable/filter_weat" />
+
+        <com.obs.CustomTextView
+            android:id="@+id/rating_text"
+            style="@style/ClanProForUBER_News"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/gluten_icon"
+            android:layout_toRightOf="@+id/gluten_icon"
+            android:text="@string/gluten_free"
+            android:textColor="@color/total_text_colur"
+            android:textSize="12dp" />
+
+        <ImageView
+            android:id="@+id/check_gluten"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:padding="5dp"
+            android:scaleX=".9"
+            android:scaleY=".9"
+            android:src="@drawable/checked" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rltMenuCategory"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layoutDirection="@string/layout_direction"
+    android:background="@drawable/ripple_effect_white">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/category_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ripple_effect_white"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp">
+
+        <com.obs.CustomTextView
+            android:id="@+id/category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="10sp"
+            android:layout_marginStart="8sp"
+            android:text="Starters"
+            android:textColor="@color/payment_method"
+            android:textSize="12sp" />
+
+        <View
+            android:id="@+id/vBottomLine"
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="15sp"
+            android:background="@color/black" />
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

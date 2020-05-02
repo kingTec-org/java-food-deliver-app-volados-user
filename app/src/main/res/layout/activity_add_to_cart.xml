@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:layoutDirection="@string/layout_direction"
+    android:textDirection="anyRtl"
+    tools:context="gofereats.views.main.subviews.AddToCartActivity">
+
+    <ScrollView
+        android:id="@+id/roomsdetailsnestedscrool"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rltAddCart"
+        android:isScrollContainer="true"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:id="@+id/rooms_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <FrameLayout
+                android:id="@+id/image_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivFoodImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@drawable/background_transparent"
+                    android:scaleType="fitXY" />
+
+                <com.obs.CustomTextView
+                    android:id="@+id/tvSoldOut"
+                    style="@style/ClanProForUBER_Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/dim_black"
+                    android:padding="5dp"
+                    android:text="@string/sold_out"
+                    android:textAllCaps="true"
+                    android:textColor="@color/payment_method"
+                    android:textSize="@dimen/text_medium"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_lay"
+                android:orientation="vertical">
+
+                <com.obs.CustomTextView
+                    android:id="@+id/tvFoodName"
+                    style="@style/ClanProForUBER_News"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:padding="10dp"
+                    android:text="Pizza"
+                    android:textSize="20sp" />
+
+                <View
+                    android:id="@+id/food_line"
+                    android:layout_width="30dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/dim_black" />
+
+                <com.obs.CustomTextView
+                    android:id="@+id/tvFoodDesc"
+                    style="@style/ClanProForUBER_News"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="10dp"
+                    android:text="@string/vegetarian"
+                    android:textAlignment="center"
+                    android:textColor="@color/payment_method"
+                    android:textSize="@dimen/text_medium" />
+
+                <RelativeLayout
+                    android:id="@+id/rltVeg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/veg_img"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/veg"
+                        android:src="@drawable/veg_image"
+                        android:tint="@color/apptheme"/>
+
+                    <com.obs.CustomTextView
+                        android:id="@+id/veg"
+                        style="@style/ClanProForUBER_Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="0dp"
+                        android:text="@string/vegetarian"
+                        android:textColor="@color/payment_method"
+                        android:textSize="@dimen/text_medium" />
+                </RelativeLayout>
+                <!--For Additional charges
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/addition_charge"
+                    android:layout_below="@+id/food_line"
+                    android:padding="10dp"
+                    android:background="@color/infobackcolur"
+                    android:layout_marginTop="35dp">
+
+                    <com.obs.CustomTextView
+                        style="@style/ClanProForUBER_Book"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Additional Charges"
+                        />
+                </RelativeLayout>-->
+                <RelativeLayout
+                    android:id="@+id/special_instru"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/food_line"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/infobackcolur"
+                    android:padding="10dp">
+
+                    <com.obs.CustomTextView
+                        style="@style/ClanProForUBER_News"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/special_instructions"
+                        android:textColor="@color/total_text_colur"
+                        android:textSize="@dimen/text_normal" />
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/edtSpecialNote"
+                    style="@style/ClanProForUBER_Book"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="viewStart"
+                    android:background="@color/transparent"
+                    android:hint="@string/add_a_note_extra_sauce_no_onions_etc"
+                    android:padding="12dp" />
+
+                <View
+                    android:id="@+id/edit_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/edtSpecialNote"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@color/infobackcolur" />
+
+                <RelativeLayout
+                    android:id="@+id/count_lay"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/oval_border">
+
+                    <com.obs.CustomTextView
+                        android:id="@+id/tvMinus"
+                        style="@style/ClanProForUBER_News"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:paddingStart="18dp"
+                        android:layout_alignParentStart="true"
+                        android:paddingEnd="10dp"
+                        android:text="-"
+                        android:textColor="@color/total_text_colur"
+                        android:textSize="30sp" />
+
+                    <com.obs.CustomTextView
+                        android:id="@+id/tvCount"
+                        style="@style/ClanProForUBER_Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:layout_centerInParent="true"
+                        android:text="1"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+
+                    <com.obs.CustomTextView
+                        android:id="@+id/tvPlus"
+                        style="@style/ClanProForUBER_News"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="100dp"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="8dp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:layout_alignParentEnd="true"
+                        android:text="+"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/total_text_colur"
+                        android:textSize="25sp" />
+                </RelativeLayout>
+
+                <com.obs.CustomTextView
+                    android:id="@+id/tvremove"
+                    style="@style/ClanProForUBER_Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:padding="@dimen/activity_horizontal_margin"
+                    android:text="@string/remove_item_from_basket"
+                    android:textAllCaps="true"
+                    android:textColor="@color/text_semi_dark"
+                    android:textSize="@dimen/text_medium" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <me.henrytao.smoothappbarlayout.SmoothAppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@android:color/transparent"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:contentInsetEnd="0dp"
+                android:contentInsetLeft="0dp"
+                android:contentInsetRight="0dp"
+                android:contentInsetStart="0dp"
+                app:contentInsetEnd="0dp"
+                app:contentInsetLeft="0dp"
+                app:contentInsetRight="0dp"
+                app:contentInsetStart="0dp"
+                app:contentScrim="@color/black"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <RelativeLayout
+                    android:id="@+id/room_details_top"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:gravity="center">
+
+                    <View
+                        android:id="@+id/vwShadeToolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_shade_toolbar" />
+
+                    <ImageView
+                        android:id="@+id/ivBack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_gravity="center"
+                        android:paddingBottom="10dp"
+                        android:paddingEnd="10dp"
+                        android:paddingStart="10dp"
+                        android:paddingTop="10dp"
+                        android:src="@drawable/backarrow_white" />
+
+
+                    <ImageView
+                        android:id="@+id/room_details_share"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/share"
+                        android:visibility="invisible" />
+
+
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </me.henrytao.smoothappbarlayout.SmoothAppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/rltAddCart"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/ripple_effect">
+
+        <com.obs.CustomTextView
+            android:id="@+id/tvAddToCart"
+            style="@style/ClanProForUBER_Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Add 1 to basket"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_normal" />
+
+        <com.obs.CustomTextView
+            android:id="@+id/tvCartAmount"
+            style="@style/ClanProForUBER_News"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="15dp"
+            android:text=""
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_normal" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

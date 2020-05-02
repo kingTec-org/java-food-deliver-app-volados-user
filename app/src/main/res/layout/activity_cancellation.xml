@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:layoutDirection="@string/layout_direction"
+    tools:context="gofereats.views.main.subviews.CancellationActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/rltBack"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/ivBackArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:padding="10dp"
+            android:scaleX=".9"
+            android:scaleY=".9"
+            android:src="@drawable/backarrow_black" />
+
+        <com.obs.CustomTextView
+            android:id="@+id/tvTitle"
+            style="@style/ClanProForUBER_Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/ivBackArrow"
+            android:text="@string/cancel_order"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_large" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line_colour" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rltBack">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="50dp">
+
+            <RelativeLayout
+                android:id="@+id/rltCancelReason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_black_border">
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    style="@style/ClanProForUBER_Medium"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:paddingBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingTop="10dp"
+                    android:spinnerMode="dialog" />
+            </RelativeLayout>
+
+            <com.obs.CustomEditText
+                android:id="@+id/edtCancelReason"
+                style="@style/ClanProForUBER_News"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@+id/rltCancelReason"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/background_black_border"
+                android:gravity="start"
+                android:hint="@string/other_reasons"
+                android:textAlignment="viewStart"
+                android:lines="5"
+                android:padding="5dp"
+                android:text="" />
+
+            <com.obs.CustomButton
+                android:id="@+id/btnCancelReason"
+                style="@style/ClanProForUBER_Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtCancelReason"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ripple_effect"
+                android:text="@string/cancel_order"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
+

@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rltWholeview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/infobackcolur"
+    android:layoutDirection="@string/layout_direction"
+    tools:context="gofereats.views.main.subviews.LocActivity">
+
+    <RelativeLayout
+        android:id="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="5dp"
+        android:paddingTop="15dp">
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="15dp"
+            android:scaleX=".9"
+            android:scaleY=".9"
+            android:src="@drawable/backarrow_black" />
+
+
+        <com.obs.CustomTextView
+            style="@style/ClanProForUBER_Book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/arrow"
+            android:gravity="center_vertical"
+            android:text="@string/delivery_details"
+            android:textSize="15dp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_lay"
+        android:layout_below="@+id/back">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <RelativeLayout
+                android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:padding="15dp">
+
+                <ImageView
+                    android:id="@+id/location_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/location_pin_icon" />
+
+                <com.obs.CustomEditText
+                    android:textAlignment="viewStart"
+                    android:id="@+id/et_location"
+                    style="@style/ClanProForUBER_News"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toStartOf="@+id/close"
+                    android:layout_toEndOf="@+id/location_icon"
+                    android:background="@color/transparent"
+                    android:ellipsize="end"
+                    android:hint="@string/enter_a_new_address"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:padding="5dp"
+                    android:scrollHorizontally="true"
+                    android:textSize="12dp" />
+                <!--<com.obs.CustomTextView
+                    style="@style/uber_clone_mobile"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:id="@+id/close"
+                    android:visibility="gone"
+                    android:padding="5dp"
+                    android:textSize="15dp"
+                    android:text="R"
+                    android:layout_alignParentRight="true"
+                    android:singleLine="true"/>-->
+
+                <ImageView
+                    android:id="@+id/close"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/close_x"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/location_placesearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/location"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:nestedScrollingEnabled="false"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/lltlocationList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/location_placesearch"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/lltCurrentLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/currentlocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:padding="15dp">
+
+                        <ImageView
+                            android:id="@+id/ivCurrentLocationicon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/location_current" />
+
+                        <com.obs.CustomTextView
+                            android:id="@+id/tvMain_address"
+                            style="@style/ClanProForUBER_News"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_toEndOf="@+id/ivCurrentLocationicon"
+                            android:layout_toRightOf="@+id/card_loction_icon"
+                            android:text=""
+                            android:textColor="@color/total_text_colur"
+                            android:textSize="12dp" />
+
+                        <com.obs.CustomTextView
+                            android:id="@+id/tvSub_address"
+                            style="@style/ClanProForUBER_News"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvMain_address"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_toEndOf="@+id/ivCurrentLocationicon"
+                            android:layout_toRightOf="@+id/ivCurrentLocationicon"
+                            android:text=""
+                            android:textColor="@color/black1"
+                            android:textSize="10dp" />
+
+                        <com.obs.CustomTextView
+                            android:id="@+id/pickup_mode"
+                            style="@style/ClanProForUBER_Medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/sub_address"
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@+id/ivCurrentLocationicon"
+                            android:layout_toRightOf="@+id/ivCurrentLocationicon"
+                            android:text="Deliver to door,12 Rose Apartments"
+                            android:textColor="@color/payment_method"
+                            android:textSize="10dp"
+                            android:visibility="gone" />
+
+                        <com.obs.CustomTextView
+                            android:id="@+id/delivery_note"
+                            style="@style/ClanProForUBER_Medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/pickup_mode"
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@+id/ivCurrentLocationicon"
+                            android:layout_toRightOf="@+id/ivCurrentLocationicon"
+                            android:text="Ring the bell"
+                            android:textColor="@color/payment_method"
+                            android:textSize="10dp"
+                            android:visibility="gone" />
+
+                        <com.obs.CustomTextView
+                            android:id="@+id/edit_delivery_note"
+                            style="@style/ClanProForUBER_Medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/delivery_note"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_toEndOf="@+id/ivCurrentLocationicon"
+                            android:layout_toRightOf="@+id/ivCurrentLocationicon"
+                            android:text="Edit the delivery note"
+                            android:textColor="@color/apptheme"
+                            android:textSize="10dp"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/ivCurrentloccheck"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/checked"
+                            android:tint="@color/apptheme"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcLocation_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:nestedScrollingEnabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lltWhen_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lltlocationList"
+                android:orientation="vertical">
+
+
+                <com.obs.CustomTextView
+                    android:id="@+id/when_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:paddingStart="10dp"
+                    android:text="@string/when"
+                    android:textColor="@color/payment_method" />
+
+                <RelativeLayout
+                    android:id="@+id/order_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/when_text"
+                    android:layout_marginBottom="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white">
+
+                    <RelativeLayout
+                        android:id="@+id/asap_lay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/asap_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="5dp"
+                            android:src="@drawable/timer" />
+
+                        <com.obs.CustomTextView
+                            style="@style/ClanProForUBER_News"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="15dp"
+                            android:layout_toEndOf="@+id/asap_icon"
+                            android:text="@string/asap_as_soon_as_possible"
+                            android:layout_toStartOf="@+id/checked_asap"
+                            android:textColor="@color/total_text_colur"
+                            android:textSize="12dp" />
+
+                        <ImageView
+                            android:id="@+id/checked_asap"
+                            android:layout_width="20dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/checked"
+                            android:tint="@color/apptheme"/>
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/line1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/asap_lay"
+                        android:layout_margin="10dp"
+                        android:background="@color/line_colour" />
+
+                    <RelativeLayout
+                        android:id="@+id/schedule_lay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/line1"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/schedule_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="5dp"
+                            android:src="@drawable/calender" />
+
+                        <com.obs.CustomTextView
+                            style="@style/ClanProForUBER_News"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="15dp"
+                            android:layout_toEndOf="@+id/schedule_icon"
+                            android:text="@string/schedule_an_order"
+                            android:layout_toStartOf="@+id/checked_sch"
+                            android:textColor="@color/total_text_colur"
+                            android:textSize="12sp" />
+
+                        <ImageView
+                            android:id="@+id/checked_sch"
+                            android:layout_width="20dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/checked"
+                            android:tint="@color/apptheme"/>
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/lineschedule"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/schedule_lay"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/line_colour" />
+
+                    <LinearLayout
+                        android:id="@+id/set_sch_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lineschedule"
+                        android:background="@color/white"
+                        android:divider="@drawable/line_divider"
+                        android:gravity="start"
+                        android:orientation="horizontal"
+                        android:showDividers="middle"
+                        android:visibility="visible"
+                        android:weightSum="2">
+
+
+                        <com.obs.CustomTextView
+                            android:id="@+id/date"
+                            style="@style/ClanProForUBER_News"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:padding="15dp"
+                            android:layout_gravity="start"
+                            android:text="@string/schedule_a_date"
+                            android:textColor="@color/black"
+                            android:textSize="12sp">
+
+                        </com.obs.CustomTextView>
+
+                        <com.obs.CustomTextView
+                            android:id="@+id/time"
+                            style="@style/ClanProForUBER_News"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:padding="15dp"
+                            android:layout_gravity="start"
+                            android:text="@string/set_time"
+                            android:textColor="@color/black"
+                            android:textSize="12sp">
+
+                        </com.obs.CustomTextView>
+                        <!--<com.obs.CustomButton
+                            style="@style/ClanProForUBER_Medium"
+                            android:textSize="12dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="15dp"
+                            android:id="@+id/date"
+                            android:background="@color/infobackcolur"
+                            android:text="Set Date"
+                            android:textAllCaps="true"
+                            />-->
+                        <!--<com.obs.CustomButton
+                            style="@style/ClanProForUBER_Medium"
+                            android:textSize="12dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:id="@+id/time"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="15dp"
+                            android:visibility="visible"
+                            android:textAllCaps="true"
+                            android:background="@color/infobackcolur"
+                            android:text="Set Time"
+                            />-->
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/delivery_notes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lltWhen_layout"
+                android:layout_marginBottom="40dp"
+                android:visibility="visible">
+
+                <com.obs.CustomTextView
+                    android:id="@+id/delivery_option_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="20dp"
+                    android:paddingStart="10dp"
+                    android:text="@string/delivery_options"
+                    android:textColor="@color/payment_method" />
+
+                <RelativeLayout
+                    android:id="@+id/delivery_option"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/delivery_option_text"
+                    android:layout_marginBottom="20dp"
+                    android:background="@color/white">
+
+                    <RelativeLayout
+                        android:id="@+id/meet_at_vehicle_lay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp">
+
+                        <ImageView
+                            android:id="@+id/meet_at_vehicle_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/car" />
+
+                        <com.obs.CustomTextView
+                            android:id="@+id/meet_at_vehicle_text"
+                            style="@style/ClanProForUBER_News"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="15dp"
+                            android:layout_toEndOf="@+id/meet_at_vehicle_icon"
+                            android:text="@string/meet_at_vehicle"
+                            android:layout_toStartOf="@+id/meet_at_vehicle_check_tick"
+                            android:textColor="@color/total_text_colur"
+                            android:textSize="12dp" />
+
+
+                        <ImageView
+                            android:id="@+id/meet_at_vehicle_check_tick"
+                            android:layout_width="20dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="5dp"
+                            android:src="@drawable/checked"
+                            android:tint="@color/apptheme"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/deliverynote_lay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/meet_at_vehicle_lay"
+                        android:padding="15dp">
+
+                        <ImageView
+                            android:id="@+id/ivClosedeliveryNote1"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="5dp"
+                            android:padding="5dp"
+                            android:src="@drawable/close_x"
+                            android:visibility="visible" />
+
+                        <com.obs.CustomEditText
+                            android:textAlignment="viewStart"
+                            android:id="@+id/etdAdddeliverynote1"
+                            style="@style/ClanProForUBER_News"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_toStartOf="@+id/ivClosedeliveryNote1"
+                            android:background="@color/transparent"
+                            android:hint="@string/add_delivey_note"
+                            android:padding="5dp"
+                            android:textSize="12dp" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/lineMeetCar"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/deliverynote_lay"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="15dp"
+                        android:background="@color/liteline" />
+
+                    <RelativeLayout
+                        android:id="@+id/delivery_to_you_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/deliverynote_lay"
+                        android:layout_marginTop="3dp"
+                        android:padding="15dp">
+
+                        <ImageView
+                            android:id="@+id/delivery_to_you_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/door" />
+
+                        <com.obs.CustomTextView
+                            android:id="@+id/delivery_to_you_text"
+                            style="@style/ClanProForUBER_News"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="20dp"
+                            android:layout_toEndOf="@+id/delivery_to_you_icon"
+                            android:text="@string/delivered_to_you"
+                            android:textColor="@color/total_text_colur"
+                            android:textSize="12dp" />
+
+
+                        <ImageView
+                            android:id="@+id/delivery_check_tick"
+                            android:layout_width="20dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="5dp"
+                            android:src="@drawable/checked"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/edits"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/delivery_to_you_layout"
+                        android:visibility="gone">
+
+                        <RelativeLayout
+                            android:id="@+id/apartmemnt_lay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingEnd="15dp"
+                            android:paddingStart="15dp"
+                            android:paddingTop="15dp">
+
+                            <ImageView
+                                android:id="@+id/ivCloseapartment"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginEnd="5dp"
+                                android:padding="5dp"
+                                android:src="@drawable/close_x"
+                                android:visibility="gone" />
+
+                            <com.obs.CustomEditText
+                                android:textAlignment="viewStart"
+                                android:id="@+id/edtAddapartment"
+                                style="@style/ClanProForUBER_News"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_toStartOf="@+id/ivCloseapartment"
+                                android:background="@color/transparent"
+                                android:hint="@string/hint_apartment"
+                                android:padding="5dp"
+                                android:singleLine="true"
+                                android:textSize="12dp" />
+
+                            <View
+                                android:id="@+id/lineFlat"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_below="@+id/edtAddapartment"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginTop="20dp"
+                                android:background="@color/liteline" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/business_lay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/apartmemnt_lay"
+                            android:padding="15dp"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/business_icon"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_centerVertical="true" />
+
+                            <com.obs.CustomEditText
+                                android:textAlignment="viewStart"
+                                android:id="@+id/add_business"
+                                style="@style/ClanProForUBER_News"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="5dp"
+                                android:layout_toEndOf="@+id/business_icon"
+                                android:background="@color/transparent"
+                                android:hint="Business name"
+                                android:padding="5dp"
+                                android:textSize="12dp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/door_deliverynote_lay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/business_lay"
+                            android:padding="15dp">
+
+                            <ImageView
+                                android:id="@+id/ivClosedeliveryNote2"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="5dp"
+                                android:padding="5dp"
+                                android:src="@drawable/close_x"
+                                android:visibility="gone" />
+
+                            <com.obs.CustomEditText
+                                android:textAlignment="viewStart"
+                                android:id="@+id/edtAdddoordelivery"
+                                style="@style/ClanProForUBER_News"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginStart="30dp"
+                                android:layout_toStartOf="@+id/ivClosedeliveryNote2"
+                                android:background="@color/transparent"
+                                android:hint="@string/add_delivey_note"
+                                android:padding="5dp"
+                                android:textSize="12dp" />
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <com.obs.CustomButton
+                android:id="@+id/btnRemoveLocation"
+                style="@style/ClanProForUBER_Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/delivery_notes"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bottom_border_grey"
+                android:gravity="center"
+                android:minHeight="35dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="@string/remove_saved_locations"
+                android:textAllCaps="true"
+                android:textColor="@color/payment_method"
+                android:textSize="12dp" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/button_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <com.obs.CustomButton
+            android:id="@+id/save_button"
+            style="@style/ClanProForUBER_Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_effect"
+            android:text="@string/save"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+    </RelativeLayout>
+</RelativeLayout>

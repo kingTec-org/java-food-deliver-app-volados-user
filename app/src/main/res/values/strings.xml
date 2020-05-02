@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE resources [<!ENTITY appname "GoferGrocery">]>
+
+<resources>
+    <string name="app_name">&appname;</string>
+
+    <string name="layout_direction">0</string>
+    <string name="layout_direction_rl">"ltr"</string>
+
+    //Base url
+    <string name="base_url" translatable="false">"http://gofergrocery.trioangledemo.com/api/"</string>
+
+    // Image upload base url
+    <string name="site_url" translatable="false">"http://gofergrocery.trioangledemo.com/"</string>
+    <string name="terms_url" translatable="false">"about/terms"</string>
+    <string name="privacy_url" translatable="false">"about/privacy"</string>
+    <!-- Googe map and place API key -->
+    <string name="google_maps_key" translatable="false">AIzaSyCO4JTEK90hi9W8f56C3ZPvEJWJtplXMVg</string>
+
+
+    <string name="network_failure">Please check your Internet Connection</string>
+    <string name="internal_server_error">Please try again after sometimes.</string>
+    <string name="login">Log in</string>
+    <string name="log_in_text">LOG IN WITH YOUR &appname; ACCOUNT</string>
+    <string name="enter_your_mobile_number">Enter Your Mobile Number</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="register">Register</string>
+    <string name="first_name">First name</string>
+    <string name="email">Email</string>
+
+
+    <string name="mobile">Mobile</string>
+    <string name="valid_mobile_number">Please Enter a valid Mobile number</string>
+    <string name="already_have_an_account">Already Have an Account?</string>
+    <string name="error_msg_email">Please enter a valid email</string>
+    <string name="error_msg_password">Please enter minimum 6 characters</string>
+    <string name="error_msg_firstname">Please enter the First name</string>
+    <string name="error_msg_lastname">Please enter your last name</string>
+    <string name="sigin_terms1">"By clicking \"REGISTER,\" I confirm that I have read and agreed to the "</string>
+    <string name="sigin_terms2"><![CDATA[Terms & Conditions]]></string>
+    <string name="sigin_terms3">" and "</string>
+    <string name="sigin_terms4">Privacy policy</string>
+    <string name="enter_the_4_digit">Enter the 4-digit code sent to you at</string>
+    <string name="clear_cart_title">You can only order items from one store at a time</string>
+    <string name="clear_cart_msg">"Clear your cart if you'd still like to order this item"</string>
+    <string name="clear_cart">"Clear cart And Add"</string>
+    <string name="resend_code">Resend Code</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="enter_your_password">Enter Your Password</string>
+    <string name="confirm_your_password">Confirm Your Password</string>
+    <string name="retry">Retry</string>
+    <string name="Password_Mismatch">Password Mismatch</string>
+    <string name="InValid_Password">InValid Password</string>
+    <string name="otpEmpty">OTP Empty</string>
+    <string name="user_food_delv_status">ASAP</string>
+    <string name="special_instructions">"Special instructions"</string>
+
+    <string name="signout_msg">"Are you sure you want to sign out?"</string>
+    <string name="signout">SIGN OUT</string>
+    <string name="special_discount">"Special discount for you only on &appname; "</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="your_favorites">Your favourites</string>
+    <string name="payment">Payment</string>
+    <string name="help">Help</string>
+    <string name="deliver_with_gofer">Deliver with &appname;</string>
+    <string name="settings">Settings</string>
+    <string name="about">About</string>
+    <string name="search_Restaurant">Search stores</string>
+    <string name="orders">Orders</string>
+    <string name="account">Account</string>
+    <string name="edit">Edit</string>
+    <string name="account_information">Account Information</string>
+    <string name="saved_places">Saved places</string>
+    <string name="home">Home</string>
+    <string name="work">Work</string>
+    <string name="sign_out">Sign out</string>
+    <string name="promotions">Promotions</string>
+    <string name="enter_promo_code">Enter Promo Code</string>
+    <string name="apply">apply</string>
+    <string name="you_have_no_favourties_list">You don\'t have any Favourites yet</string>
+    <string name="recently_added">Recently Added</string>
+    <string name="remove_selected">Remove Selected</string>
+    <string name="payment_methods">Payment method</string>
+    <string name="wallet">Wallet</string>
+    <string name="use_wallet">Use wallet</string>
+    <string name="cash">Cash</string>
+    <string name="credit_or_debit_card">Add Credit or Debit Card</string>
+    <string name="pay_for_orders_with_cash">Pay for orders with cash</string>
+    <string name="descript_cash">Use cash to pay for orders.You will see the total amount due when you place your order,and exact change is appreciated</string>
+    <string name="next">Next</string>
+    <string name="under_20_minutes">Under 20 Minutes</string>
+    <string name="new_to_gofer_eats">New To &appname;</string>
+    <string name="popular_near_you">Popular near you</string>
+    <string name="more_restaurants">More Stores</string>
+    <string name="browse_or_search">Browse or search</string>
+    <string name="see_more_Restaurants">See All Stores</string>
+    <string name="add_a_note_extra_sauce_no_onions_etc">Add a note </string>
+    <string name="your_cart">Your basket</string>
+    <string name="your_order">Your order</string>
+    <string name="people_who_ordered_this_item_also_ordered">People who ordered this item also ordered</string>
+    <string name="add_a_note">Add a note </string>
+    <string name="subtotal">Subtotal</string>
+    <string name="tax">Tax</string>
+    <string name="delivery_fee">Delivery Fee</string>
+    <string name="total">Total</string>
+    <string name="change">Change</string>
+    <string name="top_categories">Top categories</string>
+    <string name="more_restaurant">More categories</string>
+    <string name="all_restaurant">All stores</string>
+    <string name="search_for_restaurant_or_dish">Search for a store or grocery</string>
+    <string name="menu">Menu</string>
+    <string name="change_menu">Change Menu</string>
+    <string name="delivery_details">Delivery Details</string>
+    <string name="enter_a_new_address">Enter a new Address</string>
+    <string name="save">Save</string>
+    <string name="delivery_options">Delivery Options</string>
+    <string name="meet_at_vehicle">Meet at vehicle</string>
+    <string name="add_delivey_note">Add delivery note</string>
+    <string name="upcoming">UPCOMING</string>
+    <string name="view_menu">View menu</string>
+    <string name="track">Track</string>
+    <string name="view_recipt">View Receipt</string>
+    <string name="add_a_comment">Add a comment</string>
+    <string name="submit">Submit</string>
+    <string name="how_was_the_delivery">How was the delivery?</string>
+    <string name="oh_great">Oh!! Great</string>
+    <string name="what_went_wrong">Oh!! no,What went wrong?</string>
+    <string name="order_receipt">Order receipt</string>
+    <string name="close">Close</string>
+    <string name="log_in_with_gofer">Log in with &appname;</string>
+    <string name="reset">Reset</string>
+    <string name="done">Done</string>
+    <string name="recommended">Recommended</string>
+    <string name="most_popular">Most Popular</string>
+    <string name="vegetarian">Vegetarian</string>
+    <string name="vegan">Vegan</string>
+    <string name="gluten_free">"Gluten-free"</string>
+    <string name="rating">Rating</string>
+    <string name="delivery_time">Delivery time</string>
+    <string name="sort">Sort</string>
+    <string name="price">Price</string>
+    <string name="dietary">Dietary</string>
+    <string name="under">Under</string>
+    <string name="minutes">Minutes</string>
+    <string name="mins">Mins</string>
+    <string name="sold_out">Sold out</string>
+    <string name="cancel">Cancel</string>
+    <string name="cancel_c">CANCEL</string>
+    <string name="schedule_date">Schedule a date</string>
+    <string name="set_time">Set Time</string>
+    <string name="otp_mismatch">OTP Code MisMatch</string>
+    <string name="enable_permission">Please enable Permission</string>
+    <string name="add_home">Add Home</string>
+    <string name="add_work">Add Work</string>
+    <string name="deliver_to_door">Deliver to door</string>
+    <string name="no_results_found">No Results Found</string>
+    <string name="no_matches">No matches</string>
+    <string name="try_broadening">Try broadening your search</string>
+    <string name="restaurant">Stores</string>
+    <string name="promo_applied">Promo Applied</string>
+    <string name="cancel_order">Cancel Order</string>
+    <string name="other_reasons">Other Reasons</string>
+    <string name="select_reason">Select Reason</string>
+    <string name="no_past_orders">No Orders Yet</string>
+    <string name="no_upcoming_order">No Upcoming orders Scheduled</string>
+    <string name="rate">Rate</string>
+
+    <string name="please_enable_permissions">Please enable app permissions</string>
+    <string name="please_enable_location">Please enable location services</string>
+    <string name="ok">OK</string>
+    <string name="discount">Discount</string>
+    <string name="no_item_cart">There isn\'t anything in your basket.</string>
+    <string name="keepbrowsing">Keep browsing</string>
+    <string name="your_wallet_amount_is">Your Wallet Amount is</string>
+    <string name="add_amount">Add amount</string>
+    <string name="enter_amount">Enter Amount</string>
+    <string name="add_money">Add Money</string>
+    <string name="add_card">Add Card</string>
+    <string name="enter_wallet_amount">Please enter the wallet amount</string>
+    <string name="wallet_amount">Wallet Amount</string>
+    <string name="check_out">Check out</string>
+    <string name="terms_and_conditions">Terms And Conditions</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="contact">Contact</string>
+    <string name="currently_unavailable">Currently UnAvailable</string>
+
+    <string name="history">HISTORY</string>
+    <string name="remove_saved_locations">Remove Saved Address</string>
+    <string name="message">Message</string>
+    <string name="driver">Driver</string>
+    <string name="booking_fee">Booking Fee</string>
+    <string name="how_was_it">How was it?</string>
+    <string name="Food_status_door">The item Will arrive at Your Door</string>
+    <string name="the_kitchen_is_preparing_your_food">The Store is preparing your order</string>
+    <string name="estimated_arrival">Estimated arrival</string>
+    <string name="last_name">Last Name</string>
+    <string name="view_similars">View Similar</string>
+    <string name="too_far_away">Too Far Away</string>
+    <string name="total_amount">Total:</string>
+    <string name="order_id_symbol">Order #</string>
+    <string name="orderid">Order Id </string>
+    <string name="location_and_hours">Location and hours</string>
+    <string name="info">Info</string>
+    <string name="opens_at">Opens at</string>
+    <string name="closed">Closed</string>
+    <string name="call">Call</string>
+    <string name="edit_the_delivery_note">Edit delivery note</string>
+    <string name="asap_as_soon_as_possible">ASAP (As soon as possible)</string>
+    <string name="schedule_an_order">Schedule an order</string>
+    <string name="when">When</string>
+    <string name="delivered_to_you">Delivered to you</string>
+    <string name="add_promo_code">Add promo code</string>
+    <string name="min_neta">min \nETA</string>
+    <string name="view_info">View info</string>
+    <string name="place_order">Place order</string>
+    <string name="location_error">items can\'t be delivered to this location</string>
+    <string name="clearandchange">Clear cart and change location</string>
+    <string name="location_error1">The items in your cart can\'t be delivered to this location</string>
+    <string name="as_soon_as_possible">As soon as possible</string>
+    <string name="schedule_order">Schedule order</string>
+    <string name="continue_with_order">Continue With your \nprevious Order?</string>
+    <string name="you_still_have_items">You still have items in your basket from </string>
+    <string name="continue_text">Continue</string>
+    <string name="clear_basket">Clear cart</string>
+    <string name="hint_apartment">Flat number / suite /floor</string>
+    <string name="schedule_a_date">Schedule a date</string>
+    <string name="finished">Finished</string>
+    <string name="remove_item_from_basket">Remove item from basket</string>
+    <string name="payment_option">Payment options</string>
+    <string name="Ready_to_meet">Be Ready to Meet</string>
+    <string name="outside">outside</string>
+    <string name="title1">Please make another selection</string>
+    <string name="msg1">The menu changed while you were browsing and the items below are no longer available. Please select something equally delicious</string>
+    <string name="title2">Please select another item</string>
+    <string name="msgfirsthalf">An item you selected (</string>
+    <string name="msg2half">) is no longer available. Please try something equally delicious</string>
+    <string name="remove_menus">Remove Menus</string>
+    <string name="remove_menu">Remove menu</string>
+    <string name="clear_all_basket">Clear basket</string>
+    <string name="order_id">Order Id#</string>
+    <string name="getting_order_details">Getting order details…</string>
+    <string name="getting_restaurants">Getting Stores…</string>
+    <string name="penalty">Penalty</string>
+    <string name="exit">Press back again to exit.</string>
+    <string name="applied_penalty">Applied Penalty</string>
+    <string name="notes">Notes:</string>
+    <string name="what_could_better">What could have been Better?</string>
+    <string name="language">Language</string>
+    <string name="select_lang">Select Language</string>
+    <string name="login_error1">Mobile Number or Password should be valid</string>
+    <string name="login_error_2">Mobile Number should be valid</string>
+    <string name="login_error3">Please enter at least 6 Characters</string>
+    <string name="change_language">Change Language</string>
+    <string name="mins_s">Mins</string>
+    <string name="delivering_to">Delivering To</string>
+    <string name="loading">Loading…</string>
+    <string name="add_to_basket">Add %s to Basket</string>
+    <string name="update_to_basket">Update %s to Basket</string>
+    <string name="estimate_arrival">Estimation Arrival</string>
+    <string name="total_dot">Total:</string>
+    <string name="profile_upload">Profile Updated Successfully</string>
+    <string name="image_upload">Image Uploaded Successfully</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="choose_gallery">Choose from gallery</string>
+    <string name="add_photo">Add Photo!</string>
+    <string name="error">Error</string>
+    <string name="free_upto">Free upto</string>
+    <string name="expired_on">Expired on</string>
+    <string name="off">OFF</string>
+    <string name="off_on">% OFF on</string>
+    <string name="offon"> OFF on</string>
+    <string name="on">on</string>
+    <string name="off_per">% OFF</string>
+    <string name="enter_promo">Enter Promo Code</string>
+    <string name="mobile_already_entered">Mobile Number Already Entered.</string>
+    <string name="success_mobile_number">Mobile Changed Successfully</string>
+    <string name="no_location">No location found</string>
+    <string name="today">Today</string>
+    <string name="tommorow">Tomorrow</string>
+    <string name="alert">Alert</string>
+    <string name="location_removed">Location Removed</string>
+    <string name="enter_location">Enter a Location</string>
+
+    <string-array name="languages">
+        <item>English</item>
+        <item>عربى</item>
+        <item>Português</item>
+    </string-array>
+    <string-array name="languageCode" translatable="false">
+        <item>en</item>
+        <item>ar</item>
+        <item>pt</item>
+    </string-array>
+
+</resources>

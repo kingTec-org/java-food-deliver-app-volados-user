@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:orientation="horizontal"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="0dp"
+    android:layoutDirection="@string/layout_direction"
+    app:layout_constraintVertical_chainStyle="spread"
+
+    >
+
+    <RelativeLayout
+        android:id="@+id/details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:background="@drawable/background_transparent" />
+
+        <ImageView
+            android:id="@+id/rest_image"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:scaleType="fitXY" />
+
+        <RelativeLayout
+            android:id="@+id/rltOfferlay"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@color/apptheme"
+                android:paddingBottom="5dp"
+                android:paddingEnd="5dp"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:visibility="visible">
+
+                <com.obs.CustomTextView
+                    android:id="@+id/tvOffertitle"
+                    style="@style/ClanProForUBER_News"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:maxLines="2"
+                    android:text=""
+                    android:textAllCaps="true"
+                    android:textColor="@color/darkwhite"
+                    android:textSize="15sp" />
+
+                <com.obs.CustomTextView
+                    android:id="@+id/tvOfferdesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/tvOffertitle"
+                    android:maxLines="2"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="2dp"
+                    android:text=""
+                    android:textColor="@color/darkwhite"
+                    android:textSize="10sp" />
+
+                <com.obs.CustomTextView
+                    android:id="@+id/tvOfferpercent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/tvOfferdesc"
+                    android:maxLines="2"
+                    android:text=""
+                    android:textAllCaps="true"
+                    android:textColor="@color/darkwhite"
+                    android:textSize="19sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rltUnavailble"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:background="@drawable/background_dim_unavailable" />
+
+            <com.obs.CustomTextView
+                android:id="@+id/tvCurrently_Unavaiable"
+                style="@style/ClanProForUBER_Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Currently UnAvailable"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/ivWishList"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/like_white" />
+
+        <com.obs.CustomTextView
+            android:id="@+id/rest_name_location"
+            style="@style/ClanProForUBER_Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/rest_image"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/time"
+            android:maxLines="2"
+            android:textAlignment="viewStart"
+            android:text="Restaurant Name 1-T.Nagar "
+            android:textColor="@color/total_text_colur"
+            android:textSize="12.5sp" />
+
+        <com.obs.CustomTextView
+            android:id="@+id/time"
+            style="@style/ClanProForUBER_News"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/rest_image"
+            android:layout_marginTop="15dp"
+            android:text="10 -20MIN"
+            android:textColor="@color/total_text_colur"
+            android:textSize="10sp" />
+
+        <com.obs.CustomTextView
+            android:id="@+id/category"
+            style="@style/ClanProForUBER_News"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/rest_name_location"
+            android:layout_marginTop="5dp"
+            android:text="Sandwiches .₹"
+            android:textAlignment="viewStart"
+            android:textColor="@color/category_hint"
+            android:textSize="10.5sp"
+            />
+
+        <RelativeLayout
+            android:id="@+id/rltRating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/category"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp">
+
+            <com.obs.CustomTextView
+                android:id="@+id/tvRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="4.3"
+                android:textColor="@color/category_hint"
+                android:textSize="11dp" />
+
+            <ImageView
+                android:id="@+id/star"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="3dp"
+                android:layout_toEndOf="@+id/tvRating"
+                android:src="@drawable/star_two" />
+
+            <com.obs.CustomTextView
+                android:id="@+id/tvOverallRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="3dp"
+                android:layout_toEndOf="@+id/star"
+                android:text="(85)"
+                android:textColor="@color/category_hint"
+                android:textSize="11dp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rltSeeMore"
+        android:layout_width="280dp"
+        android:layout_height="190dp"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_dark_dim" />
+
+        <ImageView
+            android:id="@+id/ivSeemore"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="80dp"
+            android:src="@drawable/seemore"
+            android:tint="@color/white"
+            android:visibility="visible" />
+
+        <com.obs.CustomTextView
+            android:id="@+id/tvseemore"
+            style="@style/ClanProForUBER_Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivSeemore"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="SEE MORE"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

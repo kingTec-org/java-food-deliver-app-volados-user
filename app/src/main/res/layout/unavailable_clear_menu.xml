@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layoutDirection="@string/layout_direction"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/text_black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tvMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTitle"
+            android:layout_marginTop="5dp"
+            android:text=""
+            android:textColor="@color/text_black"
+            android:textSize="16sp" />
+
+
+        <LinearLayout
+            android:id="@+id/lltMenus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvMsg"
+            android:layout_marginTop="2dp"
+            android:orientation="vertical" />
+
+        <TextView
+            android:id="@+id/btnClearMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/lltMenus"
+            android:layout_below="@+id/lltMenus"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:paddingBottom="15dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="20dp"
+            android:paddingTop="15dp"
+            android:text=""
+            android:textAllCaps="true"
+            android:textColor="@color/app_blue"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/btnClearCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lltMenus"
+            android:layout_marginTop="10dp"
+            android:layout_toStartOf="@+id/btnClearMenu"
+            android:background="@color/white"
+            android:paddingBottom="15dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="20dp"
+            android:paddingTop="15dp"
+            android:text=""
+            android:textAllCaps="true"
+            android:textColor="@color/app_blue"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+</RelativeLayout>

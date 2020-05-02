@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:layout_marginEnd="15dp"
+    android:layout_marginStart="15dp"
+    android:layout_marginTop="10dp"
+    android:layoutDirection="@string/layout_direction"
+    android:background="@color/white">
+
+
+    <LinearLayout
+        android:id="@+id/rltClearLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <com.obs.CustomTextView
+            android:id="@+id/tvLocationtext"
+            style="@style/ClanProForUBER_Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="@string/location_error"
+            android:textAllCaps="true"
+            android:textColor="@color/total_text_colur"
+            android:textSize="16dp" />
+
+        <com.obs.CustomTextView
+            android:id="@+id/tvcleartext"
+            style="@style/ClanProForUBER_Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="@string/location_error1"
+            android:textColor="@color/total_text_colur"
+            android:textSize="15dp" />
+
+        <com.obs.CustomButton
+            android:id="@+id/btnClearCart"
+            style="@style/ClanProForUBER_News"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/background_black_border_dark"
+            android:gravity="center"
+            android:minHeight="40dp"
+            android:paddingEnd="40dp"
+            android:paddingStart="40dp"
+            android:text="@string/clearandchange"
+            android:textAllCaps="false"
+            android:textColor="@color/error_red"
+            android:textSize="12dp" />
+
+
+        <com.obs.CustomTextView
+            android:id="@+id/tvcancel"
+            style="@style/ClanProForUBER_News"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="@string/cancel"
+            android:textColor="@color/textgray"
+            android:textSize="12.5dp" />
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layoutDirection="@string/layout_direction"
+    android:layout_margin="10dp">
+
+    <RelativeLayout
+        android:id="@+id/rltAlertLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+
+        <ImageView
+            android:id="@+id/ivFarAway"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/no_resturant" />
+
+        <com.obs.CustomTextView
+            android:id="@+id/tvTooFar"
+            style="@style/ClanProForUBER_Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivFarAway"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/too_far_away"
+            android:textColor="@color/dim_black"
+            android:textSize="14dp" />
+
+        <com.obs.CustomTextView
+            android:id="@+id/tvMessage"
+            style="@style/ClanProForUBER_News"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTooFar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text=""
+            android:textColor="@color/gray_black"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:id="@+id/lltButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvMessage"
+            android:layout_marginTop="10dp"
+            android:background="@color/infobackcolur"
+            android:divider="@color/total_text_colur"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <com.obs.CustomButton
+                android:id="@+id/btnClose"
+                style="@style/ClanProForUBER_Medium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_effect_white"
+                android:text="@string/close"
+                android:textAllCaps="true"
+                android:textColor="@color/gray_black"
+                android:textSize="14dp" />
+
+            <com.obs.CustomButton
+                android:id="@+id/btnSimliar"
+                style="@style/ClanProForUBER_Medium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_effect_white"
+                android:text="@string/view_similars"
+                android:textAllCaps="true"
+                android:textColor="@color/apptheme"
+                android:textSize="14dp"
+                android:visibility="visible" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

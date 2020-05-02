@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="15dp"
+    android:layoutDirection="@string/layout_direction"
+    tools:context="gofereats.views.main.fragments.sortingfragments.PriceFragment">
+
+    <TextView
+        android:id="@+id/dollar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/round_boarder_white"
+        android:gravity="center"
+        android:text=""
+        android:textSize="8sp" />
+
+    <TextView
+        android:id="@+id/dollar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/round_boarder_white"
+        android:gravity="center"
+        android:text=""
+        android:textSize="8sp" />
+
+    <TextView
+        android:id="@+id/dollar3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/round_boarder_white"
+        android:gravity="center"
+        android:text=""
+        android:textSize="8sp" />
+
+    <TextView
+        android:id="@+id/dollar4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/round_boarder_white"
+        android:gravity="center"
+        android:text=""
+        android:textSize="8sp" />
+</LinearLayout>

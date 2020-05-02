@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/infobackcolur"
+    android:layoutDirection="@string/layout_direction"
+    tools:context="gofereats.views.main.fragments.orders.Upcoming">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/upcoming_order_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:visibility="gone">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/rltEmptylayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/ivOrdericon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/upcoming_order" />
+
+        <com.obs.CustomTextView
+            android:id="@+id/tvEmptyPastorders"
+            style="@style/ClanProForUBER_Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivOrdericon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:text="@string/no_upcoming_order"
+            android:textColor="@color/total_text_colur"
+            android:textSize="13dp" />
+    </RelativeLayout>
+</RelativeLayout>
+

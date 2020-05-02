@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_common_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="15dp"
+    android:layoutDirection="@string/layout_direction"
+    tools:context=".views.main.ShowDialog">
+
+    <com.obs.CustomTextView
+        android:id="@+id/tvMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/text_large" />
+
+    <TextView
+        android:id="@+id/tvOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/tvMessage"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/tvMessage"
+        android:background="@color/transparent"
+        android:padding="10dp"
+        android:text="@string/ok"
+        android:textAllCaps="true"
+        android:textColor="@color/apptheme"
+        android:textSize="15sp" />
+
+    <!--<com.obs.CustomTextView
+        android:id="@+id/tvMessage"
+        style="@style/ClanProForUBER_News"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/text_medium" />
+
+    <com.obs.CustomTextView
+        android:id="@+id/tvOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/tvMessage"
+        android:layout_below="@+id/tvMessage"
+        android:layout_marginBottom="5dp"
+        android:background="@color/transparent"
+        android:text="@string/ok"
+        android:textColor="@color/green1"
+        android:textSize="16dp" />-->
+</RelativeLayout>

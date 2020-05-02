@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layoutDirection="@string/layout_direction"
+    android:layout_gravity="center_horizontal">
+
+
+    <RelativeLayout
+        android:id="@+id/rltFeedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/oval_border_grey"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:paddingTop="5dp"
+        >
+
+        <com.obs.CustomTextView
+            android:id="@+id/tvFeedback"
+            style="@style/ClanProForUBER_Book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:text="Taste"
+            android:textColor="@color/total_text_colur"
+            android:textSize="12dp"
+            />
+    </RelativeLayout>
+</RelativeLayout>

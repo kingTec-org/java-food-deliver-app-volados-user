@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/infobackcolur"
+    android:layoutDirection="@string/layout_direction"
+    tools:context=".views.main.subviews.SettingActivity">
+
+    <RelativeLayout
+        android:id="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="5dp">
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="15dp"
+            android:scaleX=".9"
+            android:scaleY=".9"
+            android:src="@drawable/backarrow_black" />
+
+
+        <com.obs.CustomTextView
+            style="@style/ClanProForUBER_Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:text="@string/settings"
+            android:textSize="15sp" />
+
+        <com.obs.CustomTextView
+            android:id="@+id/edit"
+            style="@style/ClanProForUBER_Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:padding="10dp"
+            android:text="@string/save"
+            android:textSize="13sp"
+            android:visibility="gone"
+            app:textAllCaps="true" />
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/back">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/imglatout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@color/white"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:visibility="gone">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/default_user_img" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="10dp"
+                    android:indeterminate="true"
+                    android:indeterminateTint="@color/gray"
+                    android:indeterminateTintMode="src_atop"
+                    android:padding="5dp"></ProgressBar>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/account_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imglatout"
+                android:background="@drawable/layout_border"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:visibility="gone">
+
+
+                <com.obs.CustomTextView
+                    style="@style/ClanProForUBER_Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:paddingBottom="10dp"
+                    android:paddingStart="15dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/account_information"
+                    android:textAllCaps="true"
+                    android:textColor="@color/settinggray"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/infos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/account_info"
+                android:background="@color/white"
+                android:paddingBottom="5dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/namelayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/secondlayour"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="20dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_first"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1">
+
+                        <com.obs.CustomEditText
+                            android:id="@+id/input_first"
+                            style="@style/ClanProForUBER_News"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/first_name"
+                            android:inputType="textPersonName"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_last"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/input_layout_first"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1">
+
+                        <com.obs.CustomEditText
+                            android:id="@+id/input_last"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Last Name"
+                            android:inputType="textPersonName"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/emaillayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/namelayout"
+                    android:layout_margin="20dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/emailName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/emaitext"
+                            android:textAlignment="viewStart"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/email"
+                            android:inputType="textEmailAddress"
+                            android:textColor="@color/black"
+                            android:textColorHint="#ffc2c2c2"
+                            android:textSize="14sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/mobile_txtlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/emaillayout"
+                    android:layout_marginStart="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:text="@string/mobile"
+                        android:textColor="#ffc2c2c2"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/flaglayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mobile_txtlayout"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginEnd="20dp"
+                    android:clickable="false">
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/ccp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:focusableInTouchMode="false"
+                        app:ccpDialog_keyboardAutoPopup="false"
+                        app:ccp_arrowSize="1sp"
+                        app:ccp_clickable="false"
+                        app:ccp_defaultNameCode="us"
+                        app:ccp_showNameCode="false"
+                        app:ccp_textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/mobile_number"
+                        android:textAlignment="viewStart"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/ccp"
+                        android:clickable="false"
+                        android:contextClickable="false"
+                        android:cursorVisible="false"
+                        android:focusableInTouchMode="false"
+                        android:inputType="number"
+                        android:maxLines="10"
+                        android:textColor="@color/black"
+                        android:textColorHint="#ffc2c2c2"
+                        android:textSize="14sp"
+                        android:transitionName="mobilenumber" />
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/saved_places"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/infos"
+                android:background="@drawable/layout_border"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+
+                <com.obs.CustomTextView
+                    style="@style/ClanProForUBER_Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:paddingBottom="10dp"
+                    android:paddingStart="15dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/saved_places"
+                    android:textAllCaps="true"
+                    android:textColor="@color/settinggray"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/favouriteslayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/saved_places"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:id="@+id/rltHomelayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/location_home" />
+                    <!--<com.obs.CustomTextView
+                        style="@style/uber_clone_mobile1"
+                        android:id="@+id/home"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:text="t"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />-->
+
+                    <com.obs.CustomTextView
+                        android:id="@+id/hometext"
+                        style="@style/ClanProForUBER_News"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_toEndOf="@+id/home"
+                        android:text="@string/home"
+                        android:textColor="@color/black2"
+                        android:textSize="12sp" />
+
+                    <com.obs.CustomTextView
+                        android:id="@+id/tvHomeaddress"
+                        style="@style/ClanProForUBER_News"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/hometext"
+                        android:layout_toEndOf="@+id/home"
+                        android:text="@string/add_home"
+                        android:textColor="@color/black1"
+                        android:textSize="11sp" />
+
+                    <com.obs.CustomTextView
+                        android:id="@+id/tvDeliverystatus"
+                        style="@style/ClanProForUBER_News"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvHomeaddress"
+                        android:layout_toEndOf="@+id/home"
+                        android:text="Deliver to you,12,Louise"
+                        android:textColor="@color/black1"
+                        android:textSize="10sp"
+                        android:visibility="gone" />
+
+                    <com.obs.CustomTextView
+                        android:id="@+id/tvDeliverynotes"
+                        style="@style/ClanProForUBER_News"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvDeliverystatus"
+                        android:layout_toEndOf="@+id/home"
+                        android:text="Call Me "
+                        android:textColor="@color/black1"
+                        android:textSize="10sp"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rltWorklayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rltHomelayout"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/ivWork"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:src="@drawable/location_work" />
+                    <!--<com.obs.CustomTextView
+                        style="@style/uber_clone_mobile1"
+                        android:id="@+id/ivWork"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:text="b"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />-->
+
+                    <com.obs.CustomTextView
+                        android:id="@+id/tvWorktext"
+                        style="@style/ClanProForUBER_News"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_toEndOf="@+id/ivWork"
+                        android:text="@string/work"
+                        android:textColor="@color/black2"
+                        android:textSize="12sp" />
+
+                    <com.obs.CustomTextView
+                        android:id="@+id/tvWorkaddress"
+                        style="@style/ClanProForUBER_News"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvWorktext"
+                        android:layout_toEndOf="@+id/ivWork"
+                        android:text="@string/add_work"
+                        android:textColor="@color/black1"
+                        android:textSize="11sp" />
+
+                    <com.obs.CustomTextView
+                        android:id="@+id/tvWorkDeliverystatus"
+                        style="@style/ClanProForUBER_News"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvWorkaddress"
+                        android:layout_toEndOf="@+id/ivWork"
+                        android:text="Meet at vechile"
+                        android:textColor="@color/black1"
+                        android:textSize="10sp"
+                        android:visibility="gone" />
+
+                    <com.obs.CustomTextView
+                        android:id="@+id/tvWorkDeliverynotes"
+                        style="@style/ClanProForUBER_News"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvWorkDeliverystatus"
+                        android:layout_toEndOf="@+id/ivWork"
+                        android:text="Near Lamp"
+                        android:textColor="@color/black1"
+                        android:textSize="10sp"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:id="@+id/v_line"
+                android:layout_below="@+id/favouriteslayout"
+                android:background="@color/line_colour"/>
+
+
+            <RelativeLayout
+                android:id="@+id/rlt_changelanguage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/v_line"
+                android:background="@drawable/layout_border"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+
+                <com.obs.CustomTextView
+                    style="@style/ClanProForUBER_Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:paddingBottom="10dp"
+                    android:paddingStart="15dp"
+                    android:paddingTop="10dp"
+                    android:id="@+id/tv_changelanguage"
+                    android:text="@string/change_language"
+                    android:textAllCaps="true"
+                    android:textColor="@color/settinggray"
+                    android:textSize="12sp" />
+
+
+                <RelativeLayout
+                    android:id="@+id/rltlanguage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_changelanguage"
+                    android:background="@color/white"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="15dp">
+
+
+                    <com.obs.CustomTextView
+                        style="@style/ClanProForUBER_Book"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:paddingBottom="10dp"
+                        android:paddingStart="15dp"
+                        android:paddingTop="10dp"
+                        android:text="@string/language"
+                        android:textSize="15sp" />
+
+                    <com.obs.CustomTextView
+                        style="@style/ClanProForUBER_Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:paddingBottom="10dp"
+                        android:paddingStart="15dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="10dp"
+                        android:text="English"
+                        android:id="@+id/tvlanguage"
+                        android:textColor="@color/apptheme"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:id="@+id/empty"
+                    android:layout_below="@+id/rltlanguage"
+                    android:background="@color/line_colour"/>
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/signoutlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlt_changelanguage"
+                android:background="@color/white"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp">
+
+
+                <com.obs.CustomTextView
+                    style="@style/ClanProForUBER_Book"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:paddingBottom="10dp"
+                    android:paddingStart="15dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/sign_out"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

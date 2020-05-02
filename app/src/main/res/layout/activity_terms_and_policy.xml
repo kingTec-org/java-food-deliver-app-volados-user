@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/infobackcolur"
+    android:layoutDirection="@string/layout_direction"
+    tools:context="gofereats.views.main.TermsAndPolicyActivity">
+
+    <RelativeLayout
+        android:id="@+id/help_title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/bottom_line">
+
+        <ImageView
+            android:id="@+id/web_title_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:scaleX=".8"
+            android:scaleY=".8"
+            android:src="@drawable/back_grayblack_arrow" />
+
+
+        <com.obs.CustomTextView
+            android:id="@+id/webtitle"
+            style="@style/ClanProForUBER_Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="50dp"
+            android:text=""
+            android:textAlignment="viewStart"
+            android:textSize="@dimen/text_large" />
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/webView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/help_title" />
+
+</RelativeLayout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layoutDirection="@string/layout_direction"
+    android:paddingTop="10dp">
+
+    <com.obs.CustomTextView
+        android:id="@+id/recently_added"
+        style="@style/ClanProForUBER_Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="15dp"
+        android:text="@string/recently_added"
+        android:textColor="@color/total_text_colur"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/removebutton">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+
+
+            <RelativeLayout
+                android:id="@+id/deatilS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/bottom_line"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/food_image"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:id="@+id/ivFoodImageBlur"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/background_transparent_dark"
+                    android:visibility="gone" />
+
+
+                <RelativeLayout
+                    android:id="@+id/delete_lay"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="5dp">
+
+                    <ImageView
+                        android:id="@+id/delete"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/delete_button" />
+
+                </RelativeLayout>
+
+
+                <com.obs.CustomTextView
+                    android:id="@+id/Rest_name"
+                    android:textAlignment="viewStart"
+                    style="@style/ClanProForUBER_Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@+id/prepartion_time"
+                    android:layout_toEndOf="@+id/food_image"
+                    android:ellipsize="end"
+                    android:paddingStart="5dp"
+                    android:text=""
+                    android:textColor="@color/total_text_colur"
+                    android:textSize="12.5sp" />
+
+                <com.obs.CustomTextView
+                    android:id="@+id/foodType"
+                    android:textAlignment="viewStart"
+                    style="@style/ClanProForUBER_News"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Rest_name"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toStartOf="@+id/delete_lay"
+                    android:layout_toEndOf="@+id/food_image"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:paddingStart="5dp"
+                    android:text=""
+                    android:textColor="@color/category_hint"
+                    android:textSize="10dp" />
+
+
+                <com.obs.CustomTextView
+                    android:id="@+id/price_rating"
+                    style="@style/ClanProForUBER_Book"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/foodType"
+                    android:layout_marginStart="5dp"
+                    android:layout_toStartOf="@+id/prepartion_time"
+                    android:layout_toEndOf="@+id/food_image"
+                    android:ellipsize="end"
+                    android:paddingStart="5dp"
+                    android:text=""
+                    android:textColor="@color/category_hint"
+                    android:textSize="10dp"
+                    android:visibility="gone" />
+
+                <com.obs.CustomTextView
+                    android:id="@+id/prepartion_time"
+                    style="@style/ClanProForUBER_Book"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="10dp" />
+
+                <ImageView
+                    android:id="@+id/delete_check_box"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/prepartion_time"
+                    android:layout_marginTop="10dp"
+                    android:src="@mipmap/ic_launcher"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <com.obs.CustomButton
+        android:id="@+id/removebutton"
+        style="@style/ClanProForUBER_Book"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/top_border"
+        android:padding="10dp"
+        android:text="@string/remove_selected"
+        android:textAllCaps="true"
+        android:textColor="@color/remove_selected"
+        android:visibility="gone" />
+</RelativeLayout>

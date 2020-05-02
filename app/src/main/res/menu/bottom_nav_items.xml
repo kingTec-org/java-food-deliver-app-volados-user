@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MenuTitle">
+    <item
+        android:id="@+id/tab_home"
+        android:checked="true"
+        android:icon="@drawable/bottom_selector_home" />
+    <item
+        android:id="@+id/tab_search"
+        android:icon="@drawable/bottom_selector_search" />
+    <item
+        android:id="@+id/tab_orders"
+        android:icon="@drawable/bottom_selector_order" />
+    <item
+        android:id="@+id/tab_settings"
+        android:icon="@drawable/bottom_selector_profile" />
+
+</menu>

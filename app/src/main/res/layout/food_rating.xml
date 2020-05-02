@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    app:cardCornerRadius="0dp"
+    android:layoutDirection="@string/layout_direction"
+    app:cardElevation="0dp">
+
+    <RelativeLayout
+        android:id="@+id/restaurant_rating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+
+        <RelativeLayout
+            android:id="@+id/rest_details_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivMenuImage"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:scaleType="fitXY" />
+
+            <View
+                android:id="@+id/dim"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/background_dark_dim" />
+
+            <com.obs.CustomTextView
+                android:id="@+id/tvMenuname"
+                style="@style/ClanProForUBER_Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+        </RelativeLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_marginTop="-15dp"
+            android:id="@+id/like_status_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/rest_details_lay"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/thumbs_down_selected"
+            android:visibility="visible" />
+
+        <com.obs.CustomTextView
+            android:id="@+id/delivery_status"
+            style="@style/ClanProForUBER_News"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rest_details_lay"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/how_was_it"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+        <LinearLayout
+            android:id="@+id/thumbs_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/delivery_status"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            android:weightSum="2">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/thumbs_up"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:src="@drawable/thumbs_up_normal" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/thumbs_down"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:src="@drawable/thumbs_down_normal" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/feedback_comments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/thumbs_lay"
+            android:visibility="gone">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMenuIssuesList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/issues">
+            </LinearLayout>-->
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/add_commet_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/feedback_comments"
+            android:visibility="visible">
+
+            <com.obs.CustomEditText
+                android:id="@+id/add_comment"
+                style="@style/ClanProForUBER_Book"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:ellipsize="middle"
+                android:gravity="center_horizontal"
+                android:hint="@string/add_a_comment"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

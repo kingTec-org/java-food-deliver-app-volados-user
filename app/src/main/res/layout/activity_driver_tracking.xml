@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sliding_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="bottom"
+    sothree:umanoDragView="@+id/dragView"
+    sothree:umanoOverlay="true"
+    sothree:umanoPanelHeight="200dp"
+    sothree:umanoScrollableView="@+id/scrollView"
+    sothree:umanoShadowHeight="20dp"
+    tools:context="gofereats.views.main.subviews.DriverTrackingActivity">
+
+    <RelativeLayout
+        android:id="@+id/map_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/mapview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="150dp" />
+
+        <include
+            android:id="@+id/appbar_id"
+            layout="@layout/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/orders_status"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/infobackcolur">
+
+        <include
+            android:id="@+id/order_tracking_layout"
+            layout="@layout/order_tracking_detail" />
+    </RelativeLayout>
+
+
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+
+
+

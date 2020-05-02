@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layoutDirection="@string/layout_direction"
+    android:padding="10dp">
+
+    <com.obs.CustomTextView
+        android:id="@+id/tvTitle"
+        style="@style/ClanProForUBER_Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingBottom="10dp"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"
+        android:text="@string/change_menu"
+        android:textColor="@color/total_text_colur"
+        android:textSize="13dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tvTitle"
+        android:background="@color/gray"
+        android:visibility="gone" />
+
+    <gofereats.views.customize.CustomRecyclerView
+        android:id="@+id/rvMenuList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitle"
+        android:layout_marginTop="3dp"
+        android:clipToPadding="false">
+
+    </gofereats.views.customize.CustomRecyclerView>
+
+</RelativeLayout>

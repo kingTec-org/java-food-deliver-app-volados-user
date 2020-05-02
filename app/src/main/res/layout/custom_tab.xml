@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:layoutDirection="@string/layout_direction"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/ripple_effect_white"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.obs.CustomTextView
+            android:id="@+id/tvtab1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:text="@string/sort"
+            android:textColor="@color/total_text_colur"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/dot1"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:padding="3dp"
+            android:src="@drawable/green_dot"
+            android:tint="@color/apptheme"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/ripple_effect_white"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <com.obs.CustomTextView
+            android:id="@+id/tvtab2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:text="@string/price"
+            android:textColor="@color/total_text_colur"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/dot2"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:padding="3dp"
+            android:src="@drawable/green_dot"
+            android:tint="@color/apptheme"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/ripple_effect_white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <com.obs.CustomTextView
+            android:id="@+id/tvtab3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:text="@string/dietary"
+            android:textColor="@color/total_text_colur"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/dot3"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:padding="3dp"
+            android:src="@drawable/green_dot"
+            android:tint="@color/apptheme"
+            android:visibility="invisible" />
+    </LinearLayout>
+</LinearLayout>

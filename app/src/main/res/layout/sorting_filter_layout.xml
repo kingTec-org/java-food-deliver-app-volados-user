@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="@string/layout_direction"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="15dp"
+            android:src="@drawable/ic_closer"
+            android:visibility="visible" />
+
+
+        <com.obs.CustomTextView
+            android:id="@+id/tvReset"
+            style="@style/ClanProForUBER_Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:padding="15dp"
+            android:text="@string/reset"
+            android:textColor="@color/total_text_colur"
+            android:textSize="9dp"
+            app:textAllCaps="true" />
+    </RelativeLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/sorting_tabLayout"
+        style="@style/MyTabLayout"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/back"
+        android:background="@drawable/ripple_effect_white"
+        android:fillViewport="true"
+        android:minHeight="?attr/actionBarSize"
+        app:tabGravity="fill"
+        app:tabIndicatorHeight="0dp"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/blue"
+        app:tabTextColor="@color/red" />
+    <!--
+        app:tabBackground="@drawable/tab_background"
+    -->
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager_filter"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/sorting_tabLayout" />
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/viewpager_filter"
+        android:background="@color/line_colour" />
+
+    <com.obs.CustomButton
+        android:id="@+id/btnDone"
+        style="@style/ClanProForUBER_Medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line1"
+        android:background="@color/white"
+        android:text="@string/finished"
+        android:textAllCaps="true"
+        android:textColor="@color/total_text_colur"
+        android:textSize="10dp" />
+
+
+</RelativeLayout>

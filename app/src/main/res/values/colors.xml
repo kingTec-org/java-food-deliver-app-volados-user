@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_primary">#ffffff</color>
+    <color name="color_primary_dark">#000000</color>
+    <color name="color_accent">@color/app_green</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="gray">#eaeaea</color>
+    <color name="text_light_gray">#8f8f8f</color>
+
+
+    <color name="dim_text_color">#999d9da3</color>
+
+    <color name="app_green">#ff65B963</color>
+    <color name="text_hint_color">#bbbbbb</color>
+    <color name="text_semi_dark">#888888</color>
+
+    <color name="very_light_grey">#e2e2e2</color>
+
+    <color name="gray_color">#9d9d9d</color>
+
+    <color name="red">#ee6d4a</color>
+
+    <!--SwipeRefreshLayout-->
+    <color name="blue">#1976d2</color>
+
+    <!-- Uber eats-->
+    <color name="loginback">#f2f2f4</color>
+    <color name="black">#000000</color>
+    <color name="loginbuttoon">#ff8200</color>
+    <color name="apptheme">#ff8200</color>
+    <color name="loader_center">#ff8200</color>
+    <color name="Registertext">#616166</color>
+    <color name="error_red">#ff0000</color>
+    <color name="bluelight">#ff1eacc7</color>
+    <color name="colorgreencray">#2775A4</color>
+    <color name="textgray">#8a000000</color>
+    <color name="dim_black">#3c3d49</color>
+    <color name="infobackcolur">#f2f2f4</color>
+    <color name="settinggray">#7c7c83</color>
+    <color name="category_hint">#9d9da3</color>
+    <color name="remove_selected">#e31313</color>
+    <color name="payment_method">#a8a8b0</color>
+    <color name="cash_detail">#292626</color>
+    <color name="line_colour">#dadada</color>
+    <color name="text_black">#231e1e</color>
+    <color name="total_text_colur">#404040</color>
+    <color name="text_dark_gray">#4b4b4b</color>
+    <color name="appbuttondisable1">#aacf9d</color>
+    <color name="appbuttondisable">#ffcc99</color>
+    <color name="bottom_tab_normal">#ff6b6b76</color>
+    <color name="bottom_tab_selected">#ff000000</color>
+    <color name="mobile_focus_colur">#ffc2c2c2</color>
+    <color name="darkbackcolur">#e2e2e4</color>
+    <color name="gray_black">#6a6b75</color>
+    <color name="darkgreen">#0a861e</color>
+    <color name="litegreen">#248603</color>
+    <color name="hint_colur">#ababac</color>
+    <color name="black1">#6b6b76</color>
+    <color name="black2">#353543</color>
+    <color name="grey1">#8c8c99</color>
+    <color name="green1">#329b0c</color>
+    <color name="offer_background">#267f63</color>
+    <color name="darkwhite">#fafbfc</color>
+    <color name="liteline">#e9e9e9</color>
+    <color name="search_back">#f9f9f9</color>
+    <color name="search_hint">#757575</color>
+    <color name="search_category">#3a3a48</color>
+    <color name="app_blue">#ff1fbad6</color>
+</resources>
